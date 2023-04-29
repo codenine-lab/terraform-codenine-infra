@@ -1,7 +1,7 @@
-variable "elasticapp" {
+variable "eb_application_name" {
   default = "ddakzip-eb-application"
 }
-variable "beanstalkappenv" {
+variable "eb_environment_name" {
   default = "ddakzip-eb-environment"
 }
 variable "solution_stack_name" {
@@ -15,3 +15,6 @@ variable "instance_type"{
   default = "t3.micro, t2.micro"
 }
 
+variable "region" {
+  default = "ap-northeast-2"
+}
