@@ -18,3 +18,7 @@ variable "instance_type"{
 variable "region" {
   default = "ap-northeast-2"
 }
+
+variable "eb_sns_endpoint_email"{
+  default = "wq0212@naver.com"
+}

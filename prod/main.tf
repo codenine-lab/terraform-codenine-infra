@@ -75,7 +75,7 @@ resource "aws_elastic_beanstalk_environment" "beanstalkappenv" {
   setting {
     namespace = "aws:elasticbeanstalk:sns:topics"
     name      = "Notification Endpoint"
-    value     = "wq0212@naver.com"
+    value     = var.eb_sns_endpoint_email
   }
   setting {
     namespace = "aws:elasticbeanstalk:sns:topics"
