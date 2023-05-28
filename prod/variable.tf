@@ -22,3 +22,9 @@ variable "region" {
 variable "eb_sns_endpoint_email"{
   default = "wq0212@naver.com"
 }
+
+variable "domain_name" {
+    type        = string
+    default     = "codenine.shop"
+    description = "Fully domain name to deploy Web services"
+}

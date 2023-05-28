@@ -22,7 +22,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     comment             = "test comment"
     default_root_object = "index.html"
 
-    aliases = [var.domain_name]
+    aliases = ["score.${var.domain_name}"]
 
     default_cache_behavior {
         allowed_methods  = ["GET", "HEAD"]

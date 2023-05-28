@@ -1,10 +1,10 @@
 data "aws_route53_zone" "route53_host_zone" {
-    name = var.validation_domain_name
+    name = var.domain_name
 }
 
 resource "aws_route53_record" "route53_record_a_eb_test" {
     zone_id = data.aws_route53_zone.route53_host_zone.zone_id
-    name    = var.domain_name
+    name    = "score.${var.domain_name}"
     type    = "A"
 
     alias {

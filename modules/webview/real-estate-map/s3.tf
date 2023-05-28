@@ -52,7 +52,7 @@ resource "aws_s3_bucket_policy" "example" {
   policy = data.aws_iam_policy_document.s3_policy.json
 }
 
-resource "aws_s3_bucket_website_configuration" "website-config" {
+resource "aws_s3_bucket_website_configuration" "website_config" {
   bucket = aws_s3_bucket.deploy_bucket.id
   index_document {
     suffix = "index.html"

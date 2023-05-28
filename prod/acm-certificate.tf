@@ -1,10 +1,9 @@
 resource "aws_acm_certificate" "example" {
-    provider          = aws.virginia
-    domain_name       = "map.${var.domain_name}"
+    domain_name       = "api.${var.domain_name}"
     validation_method = "DNS"
 
     validation_option {
-        domain_name       = "map.${var.domain_name}"
+        domain_name       = "api.${var.domain_name}"
         validation_domain = var.domain_name
     }
 

@@ -1,11 +1,11 @@
 resource "aws_acm_certificate" "example" {
     provider          = aws.virginia
-    domain_name       = var.domain_name
+    domain_name       = "score.${var.domain_name}"
     validation_method = "DNS"
 
     validation_option {
-        domain_name       = var.domain_name
-        validation_domain = var.validation_domain_name
+        domain_name       = "score.${var.domain_name}"
+        validation_domain = var.domain_name
     }
 
     tags = {
@@ -18,7 +18,7 @@ resource "aws_acm_certificate" "example" {
 }
 
 data "aws_route53_zone" "example" {
-    name         = var.validation_domain_name
+    name         = var.domain_name
     private_zone = false
 }
 
