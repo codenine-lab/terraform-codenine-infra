@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "s3-bucket-tfstate" {
-  bucket = "s3-bucket-ddakzip-tfstate"
+  bucket = "s3-bucket-codenine-tfstate"
 }
 
 resource "aws_s3_bucket_versioning" "versioning" {
