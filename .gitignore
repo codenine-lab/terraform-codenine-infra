@@ -36,3 +36,4 @@ terraform.rc
 
 /modules/database/mysql/variables.tf
 temp.sh
+secret.sh
