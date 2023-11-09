@@ -34,7 +34,7 @@ override.tf.json
 terraform.rc
 .terraform
 
-/modules/database/mysql/variables.tf
 temp.sh
 secret.sh
 database/variables.tf
+ddakzip/production/variable.tf
