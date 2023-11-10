@@ -55,7 +55,6 @@ resource "aws_elastic_beanstalk_environment" "eb_env" {
     name      = "DefaultProcess"
     value     = "default"
   } 
-  
   setting {
     namespace = "aws:autoscaling:asg"
     name      = "MinSize"

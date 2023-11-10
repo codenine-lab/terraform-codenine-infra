@@ -1,16 +1,13 @@
 resource "aws_acm_certificate" "ddakzip_acm" {
     domain_name       = var.sub_domain_name
     validation_method = "DNS"
-
     validation_option {
         domain_name       = var.sub_domain_name
         validation_domain = var.domain_name
     }
-
     tags = {
         Environment = "test"
     }
-
     lifecycle {
         create_before_destroy = true
     }
@@ -24,7 +21,6 @@ resource "aws_route53_record" "route53_record_check_acm" {
         type   = dvo.resource_record_type
         }
     }
-
     allow_overwrite = true
     name            = each.value.name
     records         = [each.value.record]
