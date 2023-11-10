@@ -110,3 +110,21 @@ resource "aws_iam_role_policy" "attach_policy" {
 }
 EOF
 }
+
+# AWSElasticBeanstalkStatisticPolicy 정책 추가
+resource "aws_iam_role_policy" "eb_statistic_policy" {
+  name        = "AWSElasticBeanstalkStatisticPolicy"
+  role        = aws_iam_role.eb_instance_profile.name
+  policy      = <<EOF
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "elasticbeanstalk:*",
+      "Resource": "*"
+    }
+  ]
+}
+EOF
+}
