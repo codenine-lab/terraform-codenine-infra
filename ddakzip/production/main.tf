@@ -36,6 +36,27 @@ resource "aws_elastic_beanstalk_environment" "eb_env" {
     value     = "internet facing"
   }
   setting {
+    namespace = "aws:elbv2:listener:443"
+    name      = "ListenerEnabled"
+    value     = "true"
+  }
+  setting {
+    namespace = "aws:elbv2:listener:443"
+    name      = "Protocol"
+    value     = "HTTPS"
+  }
+  setting {
+    namespace = "aws:elbv2:listener:443"
+    name      = "SSLCertificateArns"
+    value     = aws_acm_certificate.ddakzip_acm.arn
+  }
+  setting {
+    namespace = "aws:elbv2:listener:443"
+    name      = "DefaultProcess"
+    value     = "default"
+  } 
+  
+  setting {
     namespace = "aws:autoscaling:asg"
     name      = "MinSize"
     value     = 1
