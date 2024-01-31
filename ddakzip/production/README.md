@@ -1,6 +1,7 @@
 ### variable.tf
 
-```variable "eb_application_name" {
+```hcl
+variable "eb_application_name" {
   default = "ddakzip-eb-application"
 }
 variable "eb_environment_name" {
