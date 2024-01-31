@@ -29,4 +29,10 @@ variable "domain_name" {
     description = "Fully domain name to deploy Web services"
 }
 
+variable "sub_domain_name"{
+    type        = string
+    default     = ""
+    description = "Sub domain name to deploy Web services"
+}
+
 ```
